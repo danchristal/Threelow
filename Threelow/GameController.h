@@ -11,10 +11,13 @@
 
 @interface GameController : NSObject
 
-@property NSArray *dice;
-@property NSMutableSet *heldDice;
+@property (nonatomic, strong) NSArray *dice;
+@property (nonatomic, strong) NSMutableSet *heldDice;
+@property (nonatomic) NSUInteger score;
+
 
 -(void)holdDie:(Dice *)die;
 -(void)resetDice;
+-(void)print;
 
 @end

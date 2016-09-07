@@ -39,12 +39,8 @@ int main(int argc, const char * argv[]) {
                 }
                 
                 do{
-                    for(int i=0; i < threelow.dice.count; i++){
-                        if([threelow.heldDice containsObject:threelow.dice[i]])
-                            NSLog(@"[Die %d]: %@",i, threelow.dice[i]);
-                        else
-                            NSLog(@"Die %d: %@",i, threelow.dice[i]);
-                    }
+                    
+                    [threelow print];
                     
                     userInput = [threelowInputCollector inputForPrompt:@"Enter die number to hold, reset to remove all holds,q to finish holding"];
                     [userInput lowercaseString];
