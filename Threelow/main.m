@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Dice.h"
+#import "InputCollector.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -18,20 +19,35 @@ int main(int argc, const char * argv[]) {
         Dice *d4 = [[Dice alloc] init];
         Dice *d5 = [[Dice alloc] init];
 
-        [d1 randomValue];
-        [d2 randomValue];
-        [d3 randomValue];
-        [d4 randomValue];
-        [d5 randomValue];
+
+        
+        InputCollector *inputCollector = [[InputCollector alloc] init];
+        NSString *userInput;
+        do{
+            userInput = [inputCollector inputForPrompt:@"Welcome to Threelow, let's Play.\nType roll to play\nQuit to exit."];
+            [userInput lowercaseString];
+            
+            if([userInput isEqualToString:@"roll"]){
+                [d1 randomValue];
+                [d2 randomValue];
+                [d3 randomValue];
+                [d4 randomValue];
+                [d5 randomValue];
+                
+                
+                NSLog(@"Dice 1 value: %@", d1.value);
+                NSLog(@"Dice 2 value: %@", d2.value);
+                NSLog(@"Dice 3 value: %@", d3.value);
+                NSLog(@"Dice 4 value: %@", d4.value);
+                NSLog(@"Dice 5 value: %@", d5.value);
+            }
+            
+            
+            
+        }while(![userInput isEqualToString:@"quit"]);
         
         
-        NSLog(@"Dice 1 value: %@", d1.value);
-        NSLog(@"Dice 1 value: %@", d2.value);
-        NSLog(@"Dice 1 value: %@", d3.value);
-        NSLog(@"Dice 1 value: %@", d4.value);
-        NSLog(@"Dice 1 value: %@", d5.value);
-        
-        
-    }
+               
     return 0;
+    }
 }

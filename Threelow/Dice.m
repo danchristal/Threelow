@@ -11,7 +11,7 @@
 @implementation Dice
 
 -(void)randomValue{
-    self.value = [NSNumber numberWithInteger: (arc4random() % 6)];
+    self.value = [NSNumber numberWithInteger: (arc4random() % 6)+1];
 }
 
 @end

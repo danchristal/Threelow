@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D9521F271D80865A00D269AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D9521F261D80865A00D269AB /* main.m */; };
 		D9521F2F1D80866400D269AB /* Dice.m in Sources */ = {isa = PBXBuildFile; fileRef = D9521F2E1D80866400D269AB /* Dice.m */; };
+		D9521F321D808A2000D269AB /* InputCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = D9521F311D808A2000D269AB /* InputCollector.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		D9521F261D80865A00D269AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D9521F2D1D80866400D269AB /* Dice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dice.h; sourceTree = "<group>"; };
 		D9521F2E1D80866400D269AB /* Dice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dice.m; sourceTree = "<group>"; };
+		D9521F301D808A2000D269AB /* InputCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputCollector.h; sourceTree = "<group>"; };
+		D9521F311D808A2000D269AB /* InputCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputCollector.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,8 @@
 		D9521F251D80865A00D269AB /* Threelow */ = {
 			isa = PBXGroup;
 			children = (
+				D9521F301D808A2000D269AB /* InputCollector.h */,
+				D9521F311D808A2000D269AB /* InputCollector.m */,
 				D9521F261D80865A00D269AB /* main.m */,
 				D9521F2D1D80866400D269AB /* Dice.h */,
 				D9521F2E1D80866400D269AB /* Dice.m */,
@@ -123,6 +128,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9521F321D808A2000D269AB /* InputCollector.m in Sources */,
 				D9521F2F1D80866400D269AB /* Dice.m in Sources */,
 				D9521F271D80865A00D269AB /* main.m in Sources */,
 			);
