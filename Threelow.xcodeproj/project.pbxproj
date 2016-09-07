@@ -10,6 +10,7 @@
 		D9521F271D80865A00D269AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D9521F261D80865A00D269AB /* main.m */; };
 		D9521F2F1D80866400D269AB /* Dice.m in Sources */ = {isa = PBXBuildFile; fileRef = D9521F2E1D80866400D269AB /* Dice.m */; };
 		D9521F321D808A2000D269AB /* InputCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = D9521F311D808A2000D269AB /* InputCollector.m */; };
+		D9521F351D80906B00D269AB /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9521F341D80906B00D269AB /* GameController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		D9521F2E1D80866400D269AB /* Dice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dice.m; sourceTree = "<group>"; };
 		D9521F301D808A2000D269AB /* InputCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputCollector.h; sourceTree = "<group>"; };
 		D9521F311D808A2000D269AB /* InputCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputCollector.m; sourceTree = "<group>"; };
+		D9521F331D80906B00D269AB /* GameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameController.h; sourceTree = "<group>"; };
+		D9521F341D80906B00D269AB /* GameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,10 +69,28 @@
 				D9521F301D808A2000D269AB /* InputCollector.h */,
 				D9521F311D808A2000D269AB /* InputCollector.m */,
 				D9521F261D80865A00D269AB /* main.m */,
+				D9521F361D8091EF00D269AB /* Model */,
+				D9521F371D8091F800D269AB /* Controller */,
+			);
+			path = Threelow;
+			sourceTree = "<group>";
+		};
+		D9521F361D8091EF00D269AB /* Model */ = {
+			isa = PBXGroup;
+			children = (
 				D9521F2D1D80866400D269AB /* Dice.h */,
 				D9521F2E1D80866400D269AB /* Dice.m */,
 			);
-			path = Threelow;
+			name = Model;
+			sourceTree = "<group>";
+		};
+		D9521F371D8091F800D269AB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D9521F331D80906B00D269AB /* GameController.h */,
+				D9521F341D80906B00D269AB /* GameController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9521F321D808A2000D269AB /* InputCollector.m in Sources */,
+				D9521F351D80906B00D269AB /* GameController.m in Sources */,
 				D9521F2F1D80866400D269AB /* Dice.m in Sources */,
 				D9521F271D80865A00D269AB /* main.m in Sources */,
 			);

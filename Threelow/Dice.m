@@ -14,4 +14,8 @@
     self.value = [NSNumber numberWithInteger: (arc4random() % 6)+1];
 }
 
+-(NSString *)description{
+    return [self.value stringValue];
+}
+
 @end
