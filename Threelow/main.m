@@ -29,37 +29,33 @@ int main(int argc, const char * argv[]) {
         NSString *userInput;
         
         do{
-            userInput = [threelowInputCollector inputForPrompt:@"Welcome to Threelow, let's Play.\nType roll to play\nQuit to exit."];
+            userInput = [threelowInputCollector inputForPrompt:@"Welcome to Threelow, let's Play.\nType 'roll' to play, 'exit' to end game."];
             [userInput lowercaseString];
             
             if([userInput isEqualToString:@"roll"]){
                 
-                for (Dice* dice in threelow.dice) {
-                    [dice randomValue];
-                }
+                [threelow rollDice];
                 
                 do{
+                    [threelow printGame];
                     
-                    [threelow print];
-                    
-                    userInput = [threelowInputCollector inputForPrompt:@"Enter die number to hold, reset to remove all holds,q to finish holding"];
+                    userInput = [threelowInputCollector inputForPrompt:@"Enter die number to hold, 'reset' to remove all holds, 'roll' to re-roll unheld dice(- 2pts), 'q' to finish."];
                     [userInput lowercaseString];
+                    
                     if([userInput isEqualToString:@"reset"])
                         [threelow resetDice];
-                    else
+                    else if([userInput isEqualToString:@"roll"]){
+                        [threelow rollDice];
+                    }
+                    else if([threelow.validDiceInput containsObject:userInput]) //if user enters 0-4
                         [threelow holdDie:threelow.dice[[userInput integerValue]]];
                     
-                  //  NSLog(@"Held set: %@", threelow.heldDice);
-                    
                 }while (![userInput isEqualToString:@"q"]);
-                
-                
+                //check high score to high score here
             }
             
-        }while(![userInput isEqualToString:@"quit"]);
-        
-        
-        
+        }while(![userInput isEqualToString:@"exit"]);
+    
         return 0;
     }
 }

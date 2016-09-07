@@ -13,11 +13,15 @@
 
 @property (nonatomic, strong) NSArray *dice;
 @property (nonatomic, strong) NSMutableSet *heldDice;
-@property (nonatomic) NSUInteger score;
+@property (nonatomic, strong) NSArray *validDiceInput;
+
+
 
 
 -(void)holdDie:(Dice *)die;
+-(void)rollDice;
 -(void)resetDice;
--(void)print;
+-(void)printGame;
+
 
 @end
